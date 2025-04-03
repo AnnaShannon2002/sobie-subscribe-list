@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Newsletter</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
 <form action="action_page.php">
   <div class="container">
     <h2>Subscribe to our Newsletter</h2>
@@ -16,3 +23,5 @@
     <input type="submit" value="Subscribe">
   </div>
 </form>
+  </body>
+</html>

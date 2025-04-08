@@ -7,43 +7,70 @@
 </head>
 
 <body>
-  <form action="action_page.php">
-    <div class="container">
-      <h2>Subscribe to the SOBIE Newsletter</h2>
-      <p>Sign up for regular news and updates regarding the conference!</p>
+  <form class="row g-3 needs-validation" novalidate>
+  <div class="col-md-4">
+    <label for="validationCustom01" class="form-label">First name</label>
+    <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+    <div class="valid-feedback">
+      Looks good!
     </div>
-
-    <div class="container" style="background-color:white">
-      <input type="text" placeholder="Name" name="name" required>
-      <input type="text" placeholder="Email address" name="mail" required>
-      <label>
-        <input type="checkbox" checked="checked" name="subscribe" required> Check the box to agree with privacy policy (required)
-      </label>
-    </div>
-
-    <div class="btn-container">
-      <input type="submit" value="Subscribe">
-      <input type="submit" value="Unsubscribe">
-    </div>
-  </form>
-  <!--
-  <div>
-    <ul>
-      <li>
-        <a href="#">Email already exist in database</a>
-      </li>
-      <li>
-        <a href="#">Wrong email format; invalid</a>
-      </li>
-      <li>
-        <a href="#">Email does not exist at all</a>
-      </li>
-      <li>
-        <a href="#">Unsubscribe</a>
-      </li>
-    </ul>
   </div>
-  -->
+  <div class="col-md-4">
+    <label for="validationCustom02" class="form-label">Last name</label>
+    <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">City</label>
+    <input type="text" class="form-control" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide a valid city.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom05" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid zip.
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.1/dist/jquery-ui.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'></script>

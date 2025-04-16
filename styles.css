@@ -1,5 +1,9 @@
 /* Example of a fixed CSS version of your styles */
 
+p {
+  color: red;
+}
+
 /* Feedback colors */
 .valid-feedback {
   color: #28a745;

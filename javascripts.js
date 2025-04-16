@@ -11,7 +11,7 @@ $(document).ready(() => {
         event.preventDefault();
         event.stopPropagation();
       } else {
-        event.preventDefault(); // prevent real submit
+        event.preventDefault(); 
 
         const userData = {
           first: $("#validationCustom01").val(),

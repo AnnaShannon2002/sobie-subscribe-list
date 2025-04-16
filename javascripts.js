@@ -11,9 +11,30 @@
       if (!form.checkValidity()) {
         event.preventDefault()
         event.stopPropagation()
+      } else {
+        event.preventDefault();
+        
+        const userData = {
+        first: $("#validationCustom01").val(),
+        last: $("#validationCustom02").val(),
+        email: $("#validationCustomEmail").val()
+        };
+
+        $("#outputBox").html(`
+          <p><strong>First Name:</strong> ${userData.first}</p>
+          <p><strong>Last Name:</strong> ${userData.last}</p>
+          <p><strong>Email:</strong> ${userData.email}</p>
+        `);
+
+        $("#outputCard").show();
+
+        console.log("Submitted User Info:", userData);
       }
 
       form.classList.add('was-validated')
     }, false)
   })
-})()
+})();
+$(() => {
+  $("#outputCard").hide(); 
+});

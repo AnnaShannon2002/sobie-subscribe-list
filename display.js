@@ -1,34 +1,32 @@
 $(() => {
   console.log("ready!");
 
-  $("#formSubmit").on("click", function (e) {
-    e.preventDefault(); 
+  $("form").on("submit", function (e) {
+    e.preventDefault();
 
     const userData = {
-      validationCustom01: $("#first").val(),
-      validationCustom02: $("#last").val(),
-      validationCustomEmail: $("#email).val(),
+      first: $("#validationCustom01").val(),
+      last: $("#validationCustom02").val(),
+      email: $("#validationCustomEmail").val()
     };
 
-    if (!userData.validationCustom01 || !userData.validationCustom02 || !userData.validationCustomEmail) {
+    if (!userData.first || !userData.last || !userData.email) {
+      alert("Please fill in all fields.");
       return;
     }
 
 
     $("#outputBox").html(`
-      <p><strong>First Name:</strong> ${userData.validationCustom01}</p>
-      <p><strong>Last Name:</strong> ${userData.validationCustom02}</p>
-      <p><strong>Last Name:</strong> ${userData. validationCustomEmail}</p>
+      <p><strong>First Name:</strong> ${userData.first}</p>
+      <p><strong>Last Name:</strong> ${userData.last}</p>
+      <p><strong>Email:</strong> ${userData.email}</p>
     `);
 
     $("#outputCard").show();
-    console.log("Submitted User Data:", userData);
 
-    $("#chooseSource").hide(); 
+
+    console.log("Submitted User Info:", userData);
   });
 
-
-
-  $("#chooseSource").hide();
   $("#outputCard").hide();
 });

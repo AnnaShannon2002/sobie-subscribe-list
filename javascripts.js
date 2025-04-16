@@ -1,17 +1,17 @@
-$(() => {
+$(document).ready(() => {
   $("#outputCard").hide();
 
   'use strict';
 
-  const forms = document.querySelectorAll('.needs-validation');
+  const forms = $(".needs-validation");
 
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
+  forms.each(function () {
+    $(this).on("submit", function (event) {
+      if (!this.checkValidity()) {
         event.preventDefault();
         event.stopPropagation();
       } else {
-        event.preventDefault();
+        event.preventDefault(); // prevent real submit
 
         const userData = {
           first: $("#validationCustom01").val(),
@@ -30,8 +30,7 @@ $(() => {
         console.log("Submitted User Info:", userData);
       }
 
-      form.classList.add('was-validated');
-    }, false);
+      this.classList.add("was-validated");
+    });
   });
 });
-

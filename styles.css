@@ -18,8 +18,8 @@
   border-color: #dc3545;
 }
 .logo {
-  width: 100px;
-  height: auto;
+  width: 100px !important;
+  height: auto !important;
 }
 .center {
   margin: auto;

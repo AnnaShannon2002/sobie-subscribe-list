@@ -17,9 +17,9 @@
 .form-control.is-invalid {
   border-color: #dc3545;
 }
-.img {
-  width: 40px;
-  height: 20px;
+.logo {
+  width: 100px;
+  height: auto;
 }
 .center {
   margin: auto;

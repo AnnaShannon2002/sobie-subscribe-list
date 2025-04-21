@@ -28,6 +28,9 @@ $(document).ready(() => {
         $("#outputCard").show();
 
         console.log("Submitted User Info:", userData);
+        setTimeout(() => {
+          window.location.href = "success.html";
+        }, 2000);
       }
 
       this.classList.add("was-validated");
